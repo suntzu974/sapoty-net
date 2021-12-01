@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="dist/public/css/style.css">
+    <script src="dist/public/js/qrcode.js" defer></script>
+    <script src="dist/public/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="main" id="main">
+        <img src="dist/public/assets/qr_logo.svg" alt="" width="68" height="68">
+        <input type="text" class="dataBox" name="data" placeholder="Paste your content" id="dataBox" value=""
+            autocomplete="false">
+        <button class="btn" id="generateBtn">Generate</button>
+        <div class="qrdiv hide" id="qrdiv">
+            <div class="qrcode" id="qrcode"></div>
+            <!--button class="downloadBtn" id="downloadBtn">Download</button -->
+            <form action=/registration method=POST>
+                <input type="hidden"  name="passphrase"  id="datasignup" value="" autocomplete="false">
+                <button type=submit class="btn">Register</button >
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+

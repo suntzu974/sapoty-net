@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<body>
+  <p>
+    <input oninput="w3.filterHTML('#id01', '.item', this.value)" class="w3-input" placeholder="Search for names..">
+  </p>
+  <table id="id01" class="w3-table-all">
+    <tr>
+      <th>Ident</th>
+      <th>Customer</th>
+      <th>Address</th>
+      <th>Postal</th>
+      <th>Town</th>
+    </tr>
+  {% for customer in customers %}
+    <tr class="item">
+      <td>{{customer.refcli}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.postal}}</td>
+      <td>{{customer.town}}</td>
+    </tr>
+    {% endfor %} 
+  </table>    
+
+</body>
+</html>
